@@ -1,0 +1,81 @@
+<?php
+/**
+ * @file
+ * Custom functionality for a block. 
+ */
+
+
+/**
+ * Implelemts hook_menu().
+ * 
+ */
+
+function blockerz_menu() {
+   $items['mypage'] = array(
+       'title' => 'my page',
+       'type' => MENU_NORMAL_ITEM,
+       'page callback' => 'blockerz_mypage',
+       'access arguments' =>array('access mypage'),
+   );
+    return $items;
+}
+
+/**
+ * 
+ * Implements Callback Function
+ */
+
+function blockerz_mypage() {
+    return "<strong>This is a test</strong>";
+}
+
+/**
+ * Implement hook_permission()
+ * 
+ */
+function blockerz_permission ()
+{
+    return array(
+    'access mypage' => array(
+        'title' => t('Access My Page'),
+        'description' => t('Access my page on my site.'),
+        
+    ),
+    
+);
+}
+
+/**
+ * 
+ * Implements hook_block_info().
+ * 
+ */
+
+
+function blockerz_block_info() {
+  // This example comes from node.module.
+  $blocks['blockerz'] = array(
+    'info' => t('Blockerz custom charts'),
+    // DRUPAL_CACHE_PER_ROLE will be assumed.
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ * 
+ */
+function blockerz_block_view($delta = ''){
+  $block = array();
+  
+  switch ($delta) {
+      case 'blockerz' :
+          $block['subject'] = t('This is my custom maps block');
+          $block['content'] = "test";
+      break;
+  }
+            
+   return $block;     
+               
+}
