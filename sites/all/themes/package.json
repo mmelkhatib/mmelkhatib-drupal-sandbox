@@ -1,0 +1,11 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "Place downloaded and custom themes that modify your site's appearance in this directory to ensure clean separation from Drupal core and to facilitate safe, self-contained code updates. Contributed themes from the Drupal community may be downloaded at http://drupal.org/project/themes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
