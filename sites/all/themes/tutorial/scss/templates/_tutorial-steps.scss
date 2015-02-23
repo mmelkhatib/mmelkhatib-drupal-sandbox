@@ -17,5 +17,23 @@ and open the template in the editor.
  border-radius:50px;
  line-height:50px;
  font-size:2.5em;
+ position:absolute;
+ left:-100px;
+ margin-top:10px;
+ @media #{medium-only} { 
+ position:relative;
+ left:0px;
+ }
+ 
+ 
+}
+
+.tutorial-description {
+    
+    
+}
+
+.tutorial-img{
+    
     
 }
