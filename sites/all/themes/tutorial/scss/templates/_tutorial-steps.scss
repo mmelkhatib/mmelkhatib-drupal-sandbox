@@ -8,6 +8,17 @@ and open the template in the editor.
     Author     : melkhatib
 */
 
+
+.tutorial-content {
+    img {
+     border:1px solid #dfdfdf;   
+    }
+
+.group-step-title{
+    margin-left:0px;
+    @media #{$large-up} {
+    margin-left:-70px;    
+    } 
 .tutorial-step {
  display:block;
  width:50px;
@@ -17,23 +28,68 @@ and open the template in the editor.
  border-radius:50px;
  line-height:50px;
  font-size:2.5em;
- position:absolute;
- left:-100px;
- margin-top:10px;
- @media #{medium-only} { 
- position:relative;
- left:0px;
+ margin-right:20px;
+ float:left;
+ 
+ @media #{$medium-only and $small-only} { 
+ float:none;
+
  }
  
  
 }
+}
 
 .tutorial-description {
-    
-    
+    ol, ul {
+border-left: 1px solid #F903A2;
+padding-left:30px;
+ol, ul {
+    border-left:none;
+}  
+    }
+    li{
+     margin-bottom:10px;   
+    }  
 }
 
 .tutorial-img{
     
     
+}
+
+.tutorial-link{
+    margin-top:20px;
+    border-top:1px solid silver;
+    .label-above{
+      font-size:2em;
+      font-weight: 800;
+      
+        
+   }    
+   .link-item{
+      margin-bottom:20px;
+       .link-title{
+         font-size:1.2em;  
+       }
+       .link-url{
+        a{
+           color:#F903A2;
+       }
+   }}
+    span:before{
+     font-size: 47px;
+display: inline-block;
+color: #ccc;
+border: 1px solid #ccc;
+width: 50px;
+float: left;
+margin-right: 11px;
+height: 50px;
+text-align: center;
+line-height: 50px;
+border-radius: 50px;
+clear:both;
+       }
+}
 }

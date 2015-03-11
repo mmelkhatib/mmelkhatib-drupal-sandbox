@@ -32,6 +32,7 @@
 
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
+    
       <section class="row <?php print $alt_header_classes; ?>">
 
         <?php if ($linked_logo): print $linked_logo; endif; ?>
@@ -79,6 +80,10 @@
       </section>
       <!--/.l-header-region -->
     <?php endif; ?>
+<?php if (!empty ($field_banner_image)) ?>
+      <div class="tutorial_header">
+          <?php print render($field_banner_image); ?>
+      </div>
 
   </header>
   <!--/.l-header -->

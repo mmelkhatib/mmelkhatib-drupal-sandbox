@@ -2,6 +2,7 @@
   "name": "zurb_foundation",
   "private": "true",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "fontawesome": "~4.3.0"
   }
 }
